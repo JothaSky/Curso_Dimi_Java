@@ -3,6 +3,10 @@ function tocaSom() {
     
 }
 function tocaSom(idElementaudio) {
+    const elemento = document.querySelector(idElementaudio);
+    elemento.currentTime = 0;
+    elemento.play();
+
     
     document.querySelector(idElementaudio).play();
 }
