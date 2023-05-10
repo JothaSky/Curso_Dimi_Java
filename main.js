@@ -3,27 +3,27 @@ function tocaSom() {
     
 }
 function tocaSom(idElementaudio) {
+    
     document.querySelector(idElementaudio).play();
 }
 const ListaDeTeclas = document.querySelectorAll('.tecla');
 
-let contador = 0;
 
 
-//enquanto
-while (contador < ListaDeTeclas.length) {
+
+//para
+for (let contador = 0; contador < ListaDeTeclas.length; contador++) {
 
     const tecla = ListaDeTeclas[contador];
     const instrumento = tecla.classList[1];
-    //template string
-    const idAudio = `#som_${instrumento}`;
- console.log(idAudio);
+    const idAudio = `#som_${instrumento}`; //template string
+    // console.log(idAudio);
 
 
     tecla.onclick = function () {
         tocaSom(idAudio);
-    };
-    contador++;
+    }
+    
 
-    console.log(contador);
+   // console.log(contador);
 }
