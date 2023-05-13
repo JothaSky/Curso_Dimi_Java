@@ -32,9 +32,12 @@ for (let contador = 0; contador < ListaDeTeclas.length; contador++) {
     tecla.onkeydown = function (evento) {
         console.log(evento.code); 
 
-        if (evento.keyCode === "Space")
-        tecla.classList.add("ativa");
+        if (evento.keyCode === "Space" || evento.keyCode === "Enter") {
+           
+            tecla.classList.add("ativa");
     }
+        }
+        
 
     tecla.onkeyup = function () {
         tecla.classList.remove("ativa");
