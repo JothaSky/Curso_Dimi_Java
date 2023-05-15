@@ -1,10 +1,14 @@
-function tocaSom() {
-    document.querySelector("#som_tecla_pom").play();
-    
+function tocaSom(seletorAudio) {
+    const elemento = document.querySelector(seletorAudio);
+
+    if (elemento === null) {
+        alert('Elemento não encontrado')
+    }
+  //  elemento.play();
 }
 function tocaSom(idElementaudio) {
     const elemento = document.querySelector(idElementaudio);
-    elemento.currentTime = 0;
+   // elemento.currentTime = 0;
     elemento.play();
 
     
